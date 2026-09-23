@@ -1,0 +1,35 @@
+{
+	"manifest_version": 3,
+	"name": "Odysseus",
+	"version": "0.1.0",
+	"description": "A browser security learning and analysis extension.",
+	"permissions": [
+		"activeTab",
+		"tabs",
+		"webRequest",
+		"scripting"
+	],
+
+	"host_permissions": [
+		"<all_urls>",
+		"http://127.0.0.1:8000/*",
+		"http://localhost:8000/*"
+	],
+	
+	"action": {
+		"default_popup": "popup.html",
+		"default_title": "Odysseus"
+	},
+
+	"background": {
+		"service_worker": "service_worker.js"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"],
+			"run_at": "document_idle"
+		}
+	]
+}

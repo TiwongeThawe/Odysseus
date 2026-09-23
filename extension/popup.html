@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odysseus</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <h1>ODYSSEUS</h1>
+
+    <p>Browser Security Navigator</p>
+    
+    <button id="inspectButton">
+        Analyze Current page
+    </button>
+
+    <div id="results">
+		<h2>Page Analysis</h2>
+
+		<p>Title: <span id="pageTitle">-</span></p>
+		<p>URL: <span id="pageUrl">-</span></p>
+        <p>Domain: <span id="pageDomain">-</span></p>
+        <p>Protocol: <span id="pageProtocol">-</span></p>
+        <p>HTTPS: <span id="httpsStatus">-</span></p>
+        <h2>Elements</h2>
+		<p>Links: <span id="linkCount">-</span></p>
+        <p>External Links: <span id="externalLinkCount">-</span></p>
+		<p>Images: <span id="imageCount">-</span></p>
+		<p>Forms: <span id="formCount">-</span></p>
+        <p>Scripts: <span id="scriptCount"></span></p>
+		<p>Iframes: <span id="iframeCount">-</span></p>
+        <p>Videos: <span id="videoCount">-</span></p>
+        <p>Buttons: <span id="buttonCount">-</span></p>
+        <p>Inputs: <span id="inputCount">-</span></p>
+
+        <!--Resource Analysis-->
+
+        <h2>Resource Analysis</h2>
+        <p>External Scripts:<span id="externalScriptCount">-</span></p>
+        <p>External ifames:<span id="externalIframeCount">-</span></p>
+        <p>External forms:<span id="externalFormCount"></span></p>
+
+        <h2>DOM Indicators</h2>
+        <p>URL Parameters: <span id="urlParameters">-</span></p>
+        <p>URL Hash: <span id="urlHash">-</span></p>
+        <p>Referrer: <span id="referrer">-</span></p>
+        <p>Inline Handlers: <span id="inlineHandlers">-</span></p>
+        <p>Content Editable: <span id="contentEditable">-</span></p>
+
+        <!--SEURITY HEADERS-->
+
+        <h2>Security Headers</h2>
+        <p>Content-Securtity-Policy:<span id="cspStatus">Cheching...</span></p>
+        <p>Strict-Transport-Security:<span id="hstsStatus">Checking...</span></p>
+        <p>X-Frame-Options:<span id="frameStatus">Cecking...</span></p>
+        <p>Content-Type-Status:<span id="contentTypeStatus">Checking...</span></p>
+        <p>Referrer-Policy:<span id="referrerPolicyStatus">Checking...</span></p>
+        <p>Permission-Policy:<span id="permissionPolicyStatus">Checking...</span></p>
+
+        <!--Findings-->
+        <h2>Security Findings</h2>
+
+        <div id="securityFindings">
+            <p>No analysis peformed yet.</p>
+        </div>
+
+        <div id="securitySummary">
+
+        </div>
+
+        <div id="backendStatus">
+            Backend: Not connected
+        </div>
+		
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
