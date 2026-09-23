@@ -620,7 +620,6 @@ Potential issue
      ↓
 Confirmed vulnerability
 
-
 These should not automatically be treated as equivalent.
 
 ---
